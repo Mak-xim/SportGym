@@ -1,6 +1,6 @@
 # Python
 __pycache__/
-*.pyc
+.pyc
 
 # Django
 db.sqlite3
