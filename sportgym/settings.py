@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'users.User'
+
 
 # Application definition
 
@@ -37,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'sport'
+    'sport',
+    'users'
 ]
 
 MIDDLEWARE = [
@@ -116,4 +119,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'static/'
+# Настройки статических файлов (ДОЛЖНО БЫТЬ ТАК)
+STATIC_URL = '/static/'
+
+# Где Django искать статику (ВАЖНО!)
+STATICFILES_DIRS = [
+    BASE_DIR / "static",  # папка static в корне проекта
+]
+
+# Для продакшена (пока не нужно)
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

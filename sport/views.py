@@ -1,9 +1,15 @@
 from django.shortcuts import render
+from .models import Abonement
+
 
 # Create your views here.
 
 def index(request):
-    return render(request, 'sport/index.html')
+    all_abonements = Abonement.objects.all()
+    context = {
+        'abonement': all_abonements,
+    }
+    return render(request, 'sport/index.html', context)
 
-def sport(request):
-    return render(request, 'sport/index.html')
+
+

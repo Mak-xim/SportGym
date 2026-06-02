@@ -21,6 +21,6 @@ from sport.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name='indexx'),
+    path('', index, name='index'),
 
 ]

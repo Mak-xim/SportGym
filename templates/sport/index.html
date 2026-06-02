@@ -1,10 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-   <h1> Ромчик Красавчикszxc</h1>
-</body>
-</html>
+
+{% extends 'base.html' %}
+
+{% block title %}MAX{% endblock %}
+
+{% block main %}
+
+    <section class="hero">
+        <h1>Стань сильнее вместе с <span style="color:#e03a3a;">MAX GYM</span></h1>
+        <p>Современное оборудование, профессиональные тренеры и мотивирующее комьюнити. Достигай целей без компромиссов.</p>
+    </section>
+
+    <section class="features">
+        <div class="card">
+            <div class="card-icon">🏋️‍♂️</div>
+            <h3>Функциональный зал</h3>
+            <p>Более 50 единиц инвентаря: свободные веса, кроссфит зона, кардио-пространство.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🧘‍♀️</div>
+            <h3>Персональные тренировки</h3>
+            <p>Индивидуальная программа под твои задачи. Результат с первой недели занятий.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🔥</div>
+            <h3>Групповые классы</h3>
+            <p>Йога, табата, сайкл, кроссфит – расписание для любого уровня подготовки.</p>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>Почему выбирают <strong style="color:#e03a3a;">IRON GYM</strong>?</h2>
+        <p>Мы создали пространство, где каждый чувствует поддержку. Круглосуточный доступ, удобная локация, современная вентиляция и раздевалки с зоной отдыха. Наша команда – это атлеты и дипломированные специалисты, которые помогут избежать травм и выжать максимум из тренировок. Присоединяйся к клубу, где железо звучит в унисон с твоим драйвом! 💪</p>
+    </section>
+    <section>
+
+    </section>
+
+
+
+    <div class="abonements-list">
+        {% for abon in abonement %}
+        <div class="card">
+            <p> {{ abon.number }}</p>
+            <p class="price">Цена: {{ abon.prise }} руб.</p>
+            <p> {{ abon.description }}</p>
+            <button>Купить</button>
+        </div>
+        {% empty %}
+        <p>Абонементов пока нет</p>
+        {% endfor %}
+    </div>
+
+{% endblock %}
+

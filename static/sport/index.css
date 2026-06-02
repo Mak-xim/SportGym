@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0a0f1e;
+    color: #f0f0f0;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ГЛАВНЫЙ КОНТЕЙНЕР ДЛЯ РАСТЯЖКИ ФУТЕРА */
+.wrapper {
+    flex: 1;
+}
+
+/* ========== ХЕДЕР ========== */
+.header {
+    background: linear-gradient(135deg, #101624 0%, #0b0f19 100%);
+    border-bottom: 3px solid #e03a3a;
+    padding: 0.8rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.header-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.logo-area {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.9rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #fff, #e03a3a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.logo span {
+    font-size: 1.2rem;
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    color: #e03a3a;
+    font-weight: 500;
+}
+
+.nav-menu ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #ddd;
+    font-weight: 600;
+    transition: 0.3s;
+    font-size: 1.05rem;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-menu a:hover {
+    color: #e03a3a;
+    border-bottom-color: #e03a3a;
+}
+
+/* ========== ОСНОВНОЙ КОНТЕНТ ========== */
+.hero {
+    background: linear-gradient(107deg, #101624 0%, #182032 100%);
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #b9c2d4;
+}
+
+.features {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card {
+    background: #111827;
+    border-radius: 24px;
+    padding: 2rem 1.5rem;
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    transition: all 0.25s ease;
+    border: 1px solid #2a2f3f;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #e03a3a;
+}
+
+.card-icon {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.7rem;
+    color: #e03a3a;
+}
+
+.card p {
+    color: #b0b7ca;
+}
+
+.about {
+    max-width: 1000px;
+    margin: 2rem auto;
+    background: #0f1420c9;
+    border-radius: 32px;
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(2px);
+    border: 1px solid #2c3246;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about p {
+    font-size: 1.05rem;
+    color: #ccd6f0;
+}
+
+/* ========== ФУТЕР ========== */
+.footer {
+    background: #070b12;
+    border-top: 2px solid #e03a3a40;
+    padding: 2rem 1.5rem 1.2rem;
+    margin-top: 3rem;
+}
+
+.footer-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: start;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 180px;
+}
+
+.footer-col h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #e03a3a;
+    letter-spacing: 1px;
+}
+
+.footer-col p, .footer-col a {
+    color: #a0a8bf;
+    text-decoration: none;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    transition: 0.2s;
+}
+
+.footer-col a:hover {
+    color: #e03a3a;
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.social-icons a {
+    background: #1e2538;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.abonements-list {
+    display: flex;
+    flex-wrap: wrap;           /* перенос на новую строку */
+    justify-content: center;   /* выравнивание по центру */
+    gap: 30px;                 /* расстояние между карточками */
+    margin-top: 40px;
+}
+
+.abonements-list .card {
+    width: 280px;
+    height: 220px;
+    background: #0b1325;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    text-align: center;
+    padding: 25px;
+    box-sizing: border-box;
+
+    color: white;
+    transition: 0.3s;
+}
+
+.abonements-list .card:hover {
+    transform: translateY(-5px);
+    border-color: #ff4444;
+    box-shadow: 0 0 15px rgba(255,68,68,0.2);
+}
+
+.abonements-list .card p:first-child {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff4444;
+}
+
+.abonements-list .price {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.abonements-list .card button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+
+    background: #ff4444;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.abonements-list .card button:hover {
+    background: #e63535;
+}
+

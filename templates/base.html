@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <link rel="stylesheet" href="{% static '/sport/index.css' %}">
+    <link {% block link %} {% endblock %}>
+    <title> {% block title %} MAX {% endblock %}</title>
+
+</head>
+
+<body>
+    <div class="wrapper">
+
+         <header class="header">
+            <div class="header-container">
+
+                <div class="logo-area">
+                    <div class="logo">MAX<span>GYM</span></div>
+                    <span class="logo-tag" style="font-size: 0.8rem; color:#aaa;">| твой старт к силе</span>
+                </div>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Абонементы</a></li>
+                        <li><a href="#">Тренеры</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Войти</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            {% block main %} {% endblock %}
+        </main>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>IRON GYM</h4>
+                <p>Спортзал нового поколения</p>
+                <p>📍 г. Москва, ул. Спортивная, 12<br>📞 +7 (495) 123-45-67<br>✉️ info@irongym.ru</p>
+            </div>
+            <div class="footer-col">
+                <h4>Режим работы</h4>
+                <p>Пн–Пт: 06:00 – 00:00<br>Сб–Вс: 08:00 – 22:00<br>Без выходных, праздники по расписанию.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Навигация</h4>
+                <p><a href="#">О нас</a><br><a href="#">Абонементы и цены</a><br><a href="#">Команда тренеров</a><br><a href="#">FAQ / Вопросы</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Мы в соцсетях</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Telegram">📱</a>
+                    <a href="#" aria-label="VK">📘</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="YouTube">▶️</a>
+                </div>
+                <p style="margin-top: 12px;">Подписывайся — больше спортивного контента!</p>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 IRON GYM — Все права защищены. Сделано для сильных духом.
+        </div>
+    </footer>
+
+</body>
+</html>
